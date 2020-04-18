@@ -17,4 +17,4 @@ Spark Component
 	- Spark Core  (Basic IO | Scheduling | Monitoring | API)
 	- Library (SparkSQL | GraphX | SparkStreaming | SparkMLib)
 	- Programming Language Supports (Scala | Java | Python | R)
-	- S 
+	- Storage (LocalFS | HDFS | AmazonS3 | RDBMS | NoSQL)
