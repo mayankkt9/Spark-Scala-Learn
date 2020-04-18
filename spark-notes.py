@@ -30,4 +30,20 @@ RDD tried to solve this problem by fault tolerant distributed in-memory computat
 	- Spark takes care of RDD Partition distribution
 	- Highly Resilient (Able to recover quickly as same data chunk are replicated across multiple node)
 
+Features of RDD
+	- In Memory computation
+	- Lazy Evaluation (Does not evaluate quickly until the action is applied)
+	- Fault Tolerant (Rebuild last data)
+	- Immutable
+	- Partitioning (Fundamental unit of parellelism)
+	- Persistence
+	- Coarse Grained Operation
+
+Ways to Create RDDs
+	- Parellelized Collection (sc.parellelize)
+	- From RDDs 
+	- External Data (HDFS | AmazonS3)
+
+
+
 
