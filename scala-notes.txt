@@ -98,8 +98,41 @@ forEach(vendors,remindPayment)
 
 
 Two types of Variable in Scala 
-	- val
-	- var
+	- val (you cant change it)
+	- var (You can change it)
+Functional programming recommends you using val
+
+Two Advantages of Immutability
+	- Adopt Mathematical approach
+	- Helps avoid various problems
+		- immutable objects are more thread safe (Concurrent Programming)
+		- data engineering 
+	- Program without variable using recursions
+		- Replace loops with recursion and avoid using vars.
+
+We are not taking an oath to keep everything immutable
+Mutability has its own advantages and we are free to choose what suites best for any problem
+But for functional programming we should choose Immutability
+
+
+Tail recursions
+
+Yes, loops are better than recursion, because recursion takes lots of stack space.
+Functional programming do involve lots of recursion so what is the solutions? 
+Tail recursion is the solution
+	- Function calling is what we do last in a function, such that no statement needs to be executed after that and so we dont have to come back after making each function call
+	- Compiler will do the optimization internally
+	- This optimization will overcome the performance and memory problem
+def tailFact(n:Int,f:Int): Int={
+	if(n<=0) return f
+	else	return tailFact(n-1,n*f)
+}
+
+Functional Statement
+	- Each statement returns a value
+	- Even println returns a value
+	- That is why some people say scala doesnt have statement it has expressions
+	- 
 
 
 
