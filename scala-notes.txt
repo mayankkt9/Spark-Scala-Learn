@@ -30,3 +30,11 @@ Why Pure Functions
 	- Easy to test
 	- Memoizable (Caching of deterministic functions) (Cache the results, compilers can also do that)
 	- Can be lazy
+
+
+First Class Function
+	- All functions in Scala are First class functions
+	- First Class Function follow these rules 
+		- You can assign it to a variable 
+		- You can pass it as an arguement to the other functions
+		- You can return it as a value from other functions.
