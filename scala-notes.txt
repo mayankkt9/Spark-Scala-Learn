@@ -38,3 +38,12 @@ First Class Function
 		- You can assign it to a variable 
 		- You can pass it as an arguement to the other functions
 		- You can return it as a value from other functions.
+Higher Order functions
+	- In Scala you can create higher order functions
+	- Example map inbuilt functions in scala is a higher order function
+	- Atlease one of these rules you should follow for higher order functions
+		- Takes one or more functions as arguement
+		- Return a function as its result
+
+
+
