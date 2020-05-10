@@ -72,3 +72,25 @@ r.map(getOps(1))
 Benfit of Anonymous Functions
 	- Instead of defining the whole function we can just write the body
 	- More convinient to write and easy to use.
+
+Signature and body of the code is function literal
+
+Benefit of passing around functions
+	- Abstraction is the main benefit of higher order function
+	- Abstraction makes the program easily extendable
+	- You communicate the behaviour and less the implementation
+	- Abstracted the implementation detail under higher order function (Example shown down)
+
+Example 
+Problem Statement - Remind all customer for payment
+
+Imperative approach
+for(Customer cust : CustList){
+	remind(cust);
+}
+
+Functional Programming Higher order function (here forEach is an higher order function)
+forEach(customer,remindPayment)
+
+
+
