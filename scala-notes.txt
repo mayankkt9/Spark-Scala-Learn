@@ -80,6 +80,9 @@ Benefit of passing around functions
 	- Abstraction makes the program easily extendable
 	- You communicate the behaviour and less the implementation
 	- Abstracted the implementation detail under higher order function (Example shown down)
+		- More Precise
+		- East to Understand
+		- More Reuse
 
 Example 
 Problem Statement - Remind all customer for payment
@@ -91,6 +94,12 @@ for(Customer cust : CustList){
 
 Functional Programming Higher order function (here forEach is an higher order function)
 forEach(customer,remindPayment)
+forEach(vendors,remindPayment)
+
+
+Two types of Variable in Scala 
+	- val
+	- var
 
 
 
