@@ -210,7 +210,26 @@ functionCall(fact(5)/fact(1))
 here first the function functionCall will be evaluated, when it sees the first f being used, then it calls fact function
 Hello will be printed first and then fact will be called
 
+Summary
+	- Scala supports strict and lazy evaluation
+	- default method is strict evaluation
+	- You can even make a function lazy, by caching it to val.
 
+Why Lazy ? 
+	- To create Data Structure to handle large volumes of data efficiently
+	- Apache Spark RDD they implement all operation lazy.
 
+Example
+Find first two error log in a file
+val s = Source.fromFile("file.txt").getLines().toList.filter(_.contains("[error]")).take(2)
+
+If your file is very large, you know this is not efficient because whole file would be traversed and converted to List
+then each value int the list would be filtered and check for error contains and then you would take first two values.
+
+Efficient Approch should be start from top as soon as you get two error logs stop.
+val s = Source.fromFile("file.txt").getLines().toStream.filter(_.contains("[error]")).take(2)
+When we create the stream it evaluated the first item, next item appears now as question mark meaning next item has not be evaluated till now.
+Stream is a lazy data Structure and toStream is a lazy function, scala access the next line when it uses the next line.
+s foreach println would give you the answer.
 
 
