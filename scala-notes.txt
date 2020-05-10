@@ -9,9 +9,11 @@ Some Features of Scala Programming
  library design and data crunching problems (Read later)
 
 
- What functions are pure functions 
+ What functions are pure functions (Should statisfy all three approach)
  	- Input solely determines the output (There are no other global variable or any other input other than parameter that determines the output)
  	- The function doesnt change the input (Doesnt have pass by value or reference feature)
  	- The function doesnt do anything else except computing the output. (Doesnt change global variable state or do anything else)
 
-
+How can we test if the function is the pure function 
+	- Just test it for the referential Transparency.
+	- That is replace the function references with the output value.
