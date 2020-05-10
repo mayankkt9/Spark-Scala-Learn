@@ -1,3 +1,6 @@
+Scala Language Doc link  - https://www.scala-lang.org/api/2.13.2/
+
+
 Some Features of Scala Programming 
 	- Supports both Functional Programming and Object Oriented Programming
 	- Immutable Object (Object whose state cant)
@@ -20,3 +23,10 @@ Pure functions are functions that doesnot have side effects.
 How can we test if the function is the pure function 
 	- Just test it for the referential Transparency.
 	- That is replace the function references with the output value.
+
+Why Pure Functions 
+	- Encourages safe way of programming (No Surprises)
+	- Composable or Modular (Function composition easy for pure functions)
+	- Easy to test
+	- Memoizable (Caching of deterministic functions) (Cache the results, compilers can also do that)
+	- Can be lazy
