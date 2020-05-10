@@ -178,12 +178,18 @@ then the value of f + f will be returned i.e fact(5)/fact(1) + fact(5)/fact(1)
 
 This is a performance issue, we can memoize this is functionCall function
 def functionCall(f: => Int) = {
-	val x = f + f
-	x
+	val x = f
+	x+x
 }
 
 Now each fact function fact(5) and fact(1) will be evaluated once.
 
 But to note these were strict evaluation, where things were evaluated immediately
+
+Strict Evaluation
+	- Default evaluation in scala is strict
+	- Scala evaluates function parameter before passing the value to a function. Hence they are evaluated only once.
+		- Higher Order function are an exception that can be evaluated multiple times based on implementation
+		- If you dont want multiple evaluation Cache it.
 
 
