@@ -46,4 +46,29 @@ Higher Order functions
 		- Return a function as its result
 
 
+Anonymous Functions 
+	- One time function
 
+Example 
+
+def getOps(c:Int) = (i:Int) => {
+	val doubler = (x:Int) => {x*2}
+	val tripler = (x:Int) => {x*3}
+	if(c>0) doubler(i)
+	else	tripler(i)
+}
+
+Instead for Clean Code you can do
+
+def getOps(c:Int) = (i:Int) => {
+	if(c>0) {i*2}
+	else	{i*3}
+}
+
+val r = 1 to 10
+r.map(getOps(-1))
+r.map(getOps(1))
+
+Benfit of Anonymous Functions
+	- Instead of defining the whole function we can just write the body
+	- More convinient to write and easy to use.
