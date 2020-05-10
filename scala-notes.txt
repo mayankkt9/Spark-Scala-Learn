@@ -14,6 +14,9 @@ Some Features of Scala Programming
  	- The function doesnt change the input (Doesnt have pass by value or reference feature)
  	- The function doesnt do anything else except computing the output. (Doesnt change global variable state or do anything else)
 
+If any function uses some global variable for calculation or changes global variable, this is an example of side effects in functions.
+Pure functions are functions that doesnot have side effects.
+
 How can we test if the function is the pure function 
 	- Just test it for the referential Transparency.
 	- That is replace the function references with the output value.
