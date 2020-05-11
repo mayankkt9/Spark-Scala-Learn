@@ -268,3 +268,26 @@ object EmailAddress {
       if (parts.length == 2) Some(parts(0), parts(1)) else None
   }
 }
+
+
+Closure
+	- Function
+	- Pure or Impure
+	- Named or Anonymous
+	- uses one or more free variable in a function
+
+Free variable are not part of the function arguement or defined locally
+def getHike(salary:Double) = salary p/100
+Here p is a free variable
+Scala looks into the so-called nearest local lexical enviroment to find global variable p.
+if p is defined locally then that p will be used otherwise you will get an error.
+Closure takes the most recent state of the free variable.
+Closure can be pure or impure based on var or val of free variable
+If Closure changes free variable, changes persists outside closure
+
+
+Functional vs OOP 
+	- We create and pass function in FP
+	- We create and pass objects in OOP
+	- Objects are more flexible than function because they carry two elements methods and data elements.
+	- So in FP how can we send data members and the methods, we can do that via Closure
