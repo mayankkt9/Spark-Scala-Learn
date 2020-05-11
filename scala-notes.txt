@@ -303,10 +303,17 @@ Type System
 Scala Type hierarchy
 Any -> AnyVal,AnyRef
 AnyVal -> Byte,Short,Int,Long,Float,Double,Char,Boolean,Unit
-
+AnyRef -> List,Seq,Iterable,String
 
 AnyVal -> Like primitives in Java but they are well defined classes in Scala
 Scala Value classes dont need new keyword and are instantiated using literal
 var x : Int = 123;
+Unit is roughly like a void represented as empty parenthesis.
+Implicit conversion of data type follow here too.
+There are many more AnyVal subclasses like RichInt,RichBoolean.. (additional functionality)
+
+AnyRef -> All Class written in Scala are part of this hierarchy
+You can use new keyword to instantiate new object
 
 
+Null and Nothing hierarchy
