@@ -233,3 +233,5 @@ Stream is a lazy data Structure and toStream is a lazy function, scala access th
 s foreach println would give you the answer.
 
 
+Pattern Matching
+
