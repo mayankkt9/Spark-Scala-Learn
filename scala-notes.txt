@@ -291,3 +291,22 @@ Functional vs OOP
 	- We create and pass objects in OOP
 	- Objects are more flexible than function because they carry two elements methods and data elements.
 	- So in FP how can we send data members and the methods, we can do that via Closure
+
+
+Type System
+	- If type checking done in compile time - Statically Typed (Scala)
+	- If type checking done in run time - Dynamic Type (Python)
+	- Statically Typed
+		- Early Protection
+		- Better Performance and optimization
+
+Scala Type hierarchy
+Any -> AnyVal,AnyRef
+AnyVal -> Byte,Short,Int,Long,Float,Double,Char,Boolean,Unit
+
+
+AnyVal -> Like primitives in Java but they are well defined classes in Scala
+Scala Value classes dont need new keyword and are instantiated using literal
+var x : Int = 123;
+
+
