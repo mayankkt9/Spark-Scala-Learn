@@ -372,3 +372,28 @@ Use Parenthesis
 
 What if we have no parameter
 Ans - println(-15 abs)
+
+
+Scala Functions 
+
+def myMax(x:Int,y:Int) : Int = {
+	if(x>y)
+		return x;
+	else
+		return y;
+}
+
+Things to note as to what all things are required and what are optional
+	- Semicolon is optional
+	- Return keyword is optional
+	- Curly braces or single line body is optional
+	- Return type is optional
+	- = is must otherwise it would behave as a Unit return type.
+Would look like
+def myMax(x:Int,y:Int) = if(x>y) x else y
+
+If you keep the parenthesis while defining a function you can call it with and without parenthesis
+But if you remove the parenthesis while defining a function you can only call it without parenthesis
+Use parenthesis when the function has a side effect 
+When function does not have side effect use without parenthesis
+Becuase thats a function a parameterless function with a parenthesis indicates a side effect.
