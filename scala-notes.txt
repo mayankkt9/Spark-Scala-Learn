@@ -1,15 +1,30 @@
+
+
+
+
 Scala Language Doc link  - https://www.scala-lang.org/api/2.13.2/
+
+/*************** 1. Some Main Feature of Scala Programming ***************/
 
 
 Some Features of Scala Programming 
 	- Supports both Functional Programming and Object Oriented Programming
 	- Immutable Object (Object whose state cant)
 	- Referential Transparency (function replaced by its result)
+Functional Programming is way of writing software application using only pure functions and 
+immutable values.
+Library design and data crunching problems (Read later)
 
+/***************************************************************************/
 
- Functional Programming is way of writing software application using only pure functions and immutable values.
+/*************** 2. Types of Functions ***************/
 
- library design and data crunching problems (Read later)
+Types of Functions
+	- Pure Functions
+	- Impure Functions
+	- First Class Functions
+	- Higher Order Functions
+	- Anonymous Functions
 
 
  What functions are pure functions (Should statisfy all three approach)
@@ -317,3 +332,43 @@ You can use new keyword to instantiate new object
 
 
 Null and Nothing hierarchy
+Any Ref Class <- Null <- Nothing
+Any Val Class <- Nothing
+
+Assigning null and nothing are not allowed for value classes
+Assigning null is allowed for reference classes
+Scala has automatic type inference 
+val i = 5 + 3
+making code short and precise
+But it is mandatory to give type to function parameter.
+def fun(i:Int) = i + 4
+Here it also infer it return type as Int.
+But in some scenario it cant do that - Recursive function
+
+
+Scala is a pure OOP language as every value in a language is an Object (Integer,Double)
+
+Operators
+	- There are no operator in Scala
+	- As all value are objects, each have function as their operator
+	- Scala allows us to use the symbols as identifiers
+	- Scala implements the arithmetic, logical, bitwise operators as methods
+	- Every Method in scala is an operator (Important)
+	- Scala allows Object Oriented Notation - Dot Notation as well as the opertor notation to call methods.
+	- Four unary opertor in scala - +,-,~,!
+Example
+
+val i = 10
+Calling via dot notation
+i.*(5) gives 50 
+i.compare(5) gives 5 
+Calling via operator notation
+i * 5 gives 50
+i compare 5 gives 5
+
+What if we have more than one input parameter ?
+Ans - val r = 1 to (10,2)
+Use Parenthesis
+
+What if we have no parameter
+Ans - println(-15 abs)
