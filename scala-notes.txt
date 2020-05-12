@@ -426,3 +426,21 @@ because scala knows customer is a list of Strings and we can remove parenthesis 
 
 
 Placeholder Syntax
+
+Example 
+Reduce method takes two parameter, successive values from list and does the operation
+list.reduce((x:Int,y:Int)=>x+y)
+list.map((x)=>(x+10))
+If scala knows that reduce takes function as two parameter and for example map function takes function as one parameter 
+why do we have to specify it again, we can use place holder syntax for this.
+
+So we can write this as 
+list.reduce(_+_) // First underscore represent first parameter and second underscore second parameter
+list.map(_+10)
+
+It wont work if there are more underscore than parameter
+Example 
+list.reduce ((x,y)=>x+y/x min y)
+list.reduce(_+_/_ min _) // Compiler wont be able to know where to place x and y .
+
+
