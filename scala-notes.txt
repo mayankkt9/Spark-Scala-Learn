@@ -496,7 +496,15 @@ underscore here is part of the partially applied function concept discussed late
 We can call this in a single step instead of assigning a value
 greetSomeone("Hello")("Mayank")
 O/p -> Hello Mayank
-This is called function currying. Calling function in a series
+This is called function currying. Calling function in a series. 
+One more example
+val f1 = (x:Int) => (y:Int) => Math.sqrt(x+y)
+f1(4)(12)
+Ans = 4
+
+This program becomes confusing when you add return type to it 
+val f1: Int=>(Int=>Double) = (x:Int) => (y:Int) => Math.sqrt(x+y)
+So remove everything from first colon to first equal to and try adding bracket to function body that would make it easy.
 
 
 
