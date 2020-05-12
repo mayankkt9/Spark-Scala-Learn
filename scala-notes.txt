@@ -577,3 +577,52 @@ sumOfX(x=>x*x)(1,5)
 val si = sumOfX(x=>x*x) _ // This notation became so simple
 //If multi line 
 val si = sumOfX {x=>x*x} _
+
+Functional Programmer will try his best to remove variables inside functions
+
+Scala Control Abstraction
+	- if else
+	- Match case
+	- while loop and do while loop
+	- Higher order control abstraction
+	- for expression 
+	- Own Loop Construct
+
+Match Case 
+	- break statements are optional
+	- curly braces inside case statement are optional
+
+Higher Order Control Abstraction
+	- This capability allows you to abstract away the code clutter and make your final code precise, neat and easy to understand
+	- If you are using any Spark libraries you would be noticing such abstraction more than often
+	- If you are implementing a library in scala you will be implementing many of such abstractions
+
+If you want to do this job repeatedly
+	- Open file
+	- read it line by line 
+	- perform some operation on each line 
+	- make sure file is closed at the end
+You will 
+withTextFile(fileLocation)map(doThisWork) 
+
+Some Examples of Higher Order Abstraction in Scala 
+	- foreach
+		- l.foreach(f1)
+		- Return type is Unit
+		- basically says apply f1 to all elements of l
+		- l.forEach(println)
+	- map
+		- l.map(f1)
+		- Evereything same as forEach just the difference is it returns a value
+		- Applies f1 to each value and returns the updated collection
+	- flatMap
+		- l.flatMap(f1) // f1=split(" ")
+		- Specialized version of map
+		- Takes the return value of f1 and breaks them again to get flattened list
+	- filter
+		- l.filter(x=>x.startsWith("i"))
+		- takes a boolean function, apply it to all element and return only those element that statify boolean expression
+	- withFilter
+		- l.withFilter(x=>x.startsWith("i")).map(x=>x.capitalize)
+		- filter returns you a new collection, withFilter doesnt, applies to subsequent calls
+
