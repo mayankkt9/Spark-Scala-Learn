@@ -397,3 +397,21 @@ But if you remove the parenthesis while defining a function you can only call it
 Use parenthesis when the function has a side effect 
 When function does not have side effect use without parenthesis
 Becuase thats a function a parameterless function with a parenthesis indicates a side effect.
+
+
+Function Literal 
+	- It is just another way to define a function
+	- Used it through Higher Order Functions
+We can create values using a literal like this 
+val s = "Hello World"
+The same way we can create a function value using function literal
+val f = (x:Int) => {x+5}
+One more example 
+Create a function that takes two parameter an Integer and a String, function return another string
+by concatinating the string around the integer.
+val f = (x:Int,s:String) => {s+x+s}
+val f is the value
+(x:Int,s:String) is the function type 
+{s+x+s} is the function literal
+
+
