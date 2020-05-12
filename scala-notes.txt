@@ -462,4 +462,42 @@ def getErrors(fileName:String) = {
 }
 
 
+Higher Order Function
+	- Can take a function as an arguement
+	- Can return a function
+
+Taking function as arguement
+intDecorate(5,(y:Int) => "[" + y + "]")
+Defining this function
+def intDecorate(x:Int, f:(Int)=>String) = {}
+
+Returning a function from a function.
+So requirement is 
+val hiSomeone = greetSomeone("Hi")
+hiSomeone("Mayank")
+O/P -> Hi Mayank
+
+def greetSomeone(prefix:String)= {
+	(name:String) => println(prefix + " " + name)
+}
+
+Created a local Anonymous function as the last line.
+Last line indicates it returned that anonymous function 
+So to return a function from a higher order function just create a anonymous function in the last line 
+We can also do this in an ordinary local function
+
+def greetSomeone(prefix:String)= {
+	def f2(name:String) => println(prefix + " " + name)
+	f2 _
+}
+forecefully returning f2 in the last line 
+underscore here is part of the partially applied function concept discussed later.
+
+We can call this in a single step instead of assigning a value
+greetSomeone("Hello")("Mayank")
+O/p -> Hello Mayank
+This is called function currying. Calling function in a series
+
+
+
 
