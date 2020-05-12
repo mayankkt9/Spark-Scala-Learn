@@ -401,6 +401,7 @@ Becuase thats a function a parameterless function with a parenthesis indicates a
 
 Function Literal 
 	- It is just another way to define a function
+	- you can assign a function literal to a value.
 	- Used it through Higher Order Functions
 		- Pass it to a higher order function
 		- Return it from a higher order function
@@ -420,5 +421,8 @@ So When do we use Function Literal
 	- Pass it to a higher order function 
 customer.map((x:String)=>x.capitalize)
 customer.map(x =>x.capitalize) 
-because scala knows customer is a list of Strings.
+because scala knows customer is a list of Strings and we can remove parenthesis if one arguement
 
+
+
+Placeholder Syntax
