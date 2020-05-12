@@ -552,3 +552,28 @@ def applySums(f:(Int,Int)=>Int) => f(1,5)
 applySums(sumOfCubes)
 applySums(sumOfSquares)
 applySums(sumOfSingleX)
+
+Converting function defination to function value
+def sum(x:Int,y:Int,z:Int) = x+y+z
+val s3 = sum(_:Int,_:Int,_:Int)
+Or short hand notation
+val s3 = sum _
+
+
+Function Currying
+	- Nothing but a syntactic sugar
+	- Allows you to split function parameter into multiple groups
+	- Scala will internally generate series of function for each arguement group, Thats what we want in partially applied function
+
+Example
+Normally we do this way 
+def sumOfX(f:Int=>Int,a:Int,b:Int):Int = if(a>b) 0 else f(a) + sumOfX(f,a+1,b)
+sumOfX(x=>x*x,1,5)
+val si = sumOfX(x=>x*x,_:Int,_:Int)
+
+In function currying we group arguement
+def sumOfX(f:Int=>Int)(a:Int,b:Int):Int = if(a>b) 0 else f(a) + sumOfX(f,a+1,b)
+sumOfX(x=>x*x)(1,5)
+val si = sumOfX(x=>x*x) _ // This notation became so simple
+//If multi line 
+val si = sumOfX {x=>x*x} _
