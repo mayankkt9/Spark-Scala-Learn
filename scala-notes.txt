@@ -423,6 +423,15 @@ customer.map((x:String)=>x.capitalize)
 customer.map(x =>x.capitalize) 
 because scala knows customer is a list of Strings and we can remove parenthesis if one arguement
 
+Talking about function value 
+val f = (x:Int) => x + 10
+Scala generates a class for function literal and replaces the above code with
+It instantiate the class as an object and assign it to a value here f.
+So function value is an object whereas function literal is a source code or a class.
+val f = new Function1[Int,Int]{
+	def apply(x:Int):Int = x+10
+}
+
 
 
 Placeholder Syntax
@@ -442,5 +451,15 @@ It wont work if there are more underscore than parameter
 Example 
 list.reduce ((x,y)=>x+y/x min y)
 list.reduce(_+_/_ min _) // Compiler wont be able to know where to place x and y .
+
+Local Function
+	- Define function inside another function
+	- Or Nested Function
+def getErrors(fileName:String) = {
+	def isError(line:String): {
+		if(line.contains("error")) true else false
+	}
+}
+
 
 
