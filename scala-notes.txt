@@ -507,5 +507,48 @@ val f1: Int=>(Int=>Double) = (x:Int) => (y:Int) => Math.sqrt(x+y)
 So remove everything from first colon to first equal to and try adding bracket to function body that would make it easy.
 
 
+Variable length arguement
+	- Repeating arguement must be the last arguement
+	- All values must be of same data type
+	- All values are packed into an array
+Example
+def echo(s:String*) = s foreach println
 
+Named arguement
+	- To make some parameters optional use the default valueto define them and use the named 
+	argement to call them .
+def doSomething(f:String =>Unit = println, s:String) = f(s)
 
+So, during function defination, we specified default value for first argument above.
+Now if we use doSomething function with just the second parameter it will work
+doSomething(s="Hello");
+
+Partial Applied Functions
+	- To make generic functions
+	- By Fixing some parameter
+
+Division 
+def div(x:Double,y:Double):Double = x/y
+val inv = div(1,_:Double) // Instead of returning a double in this case it would return a whole new function
+inv(10) gives you 0.1
+
+Requirement 
+	- 1+2+3+4+5
+	- 1*1+2*2+3*3+4*4+5*5
+	- 1*1*1+2*2*2+3*3*3+4*4*4+5*5*5
+We can do this via Higher Order Function
+def sumOfX(f:Int=>Int,a:Int,b:Int):Int = if(a>b) 0 else f(a) + sumOfX(f,a+1,b)
+Now we can pass these accordingly
+sumOfX(x=>x,1,5)
+sumOfX(x=>x*x,1,5)
+sumOfX(x=>x*x*x,1,5)
+
+Doing this with Partially Applied Function
+val sumOfCubes = sumOfX(x=>x*x*x,_:Int,_:Int)
+sumOfCubes(1,5)
+
+We can create one more function and make it generic
+def applySums(f:(Int,Int)=>Int) => f(1,5)
+applySums(sumOfCubes)
+applySums(sumOfSquares)
+applySums(sumOfSingleX)
