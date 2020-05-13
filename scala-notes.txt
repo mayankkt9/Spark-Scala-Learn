@@ -625,4 +625,76 @@ Some Examples of Higher Order Abstraction in Scala
 	- withFilter
 		- l.withFilter(x=>x.startsWith("i")).map(x=>x.capitalize)
 		- filter returns you a new collection, withFilter doesnt, applies to subsequent calls
+		- Efficient because it is lazy method and applies the boolean function when we use the element for the subsequent call
+
+For expression
+	- You must need a collection to iterate scala for loop
+	- Scala doent have a for loop, its just a syntactic sugar 
+	- Scal compiler converts the for loop to a combination of control abstraction (foreach,map,filter...)
+	- for(seq){} -> behaves like foreach method -> return Unit
+	- for(seq)yield{} -> behaves like map method -> returns new Collection
+val n = 1 to 10
+for (i <- n ) println(i)
+for (i <- 1 to 10 ) println(i)
+for (i <- 1 to 10 ) yield {i}
+for (i <- n; j <- n ) println(i)
+
+Requirement = from file get fields
+for(line <- Source.fromFile("emp.txt").getLines().toList){
+	val fields = line.split(",")
+	println(fields(0)+"--"+fields(1)+"--"+fields(2)+"--"fields(10)+"--")
+}
+We can also do something like - keep all assignment and condition in parenthesis and keep body small
+
+for{
+	line <- Source.fromFile("emp.txt").getLines().toList
+	fields = line.split(",")
+	if(fields(10)=="60")
+}println(fields(0)+"--"+fields(1)+"--"+fields(2)+"--"fields(10)+"--")
+
+
+
+Scala Object Oriented Programming
+	- Single Line Class | No need to write getter and setter
+	- If you need some validation you may write java style classes and getter setter following method name convention
+	- For all data member scala compiler creates reader and writer method by default
+	- But if you want to change those method and write custom reader and writer you can do so.
+	- Class comes with default constructor with no arguement
+	- We can change constructor
+		- Default Constructor
+		- Primary constructor - class Circle(var radius:Int){} ->Give it while defining class, and define all data members here
+		- Auxiliary constructor - for less arguments , it calls Primary constructor
+
+for Auxiliary constructor
+def this() = {this(1,1,1)}
+def this(w:Int,h:Int) = {this(w,h,1)}
+
+class Customer(var id:Int, var name:String)
+val c = new Customer(101,"ABC")
+c.id
+c.name="XYZ" 
+
+
+Scala Object (Singleton Object)
+	- Different then java Object
+	- Scala Object can have only one instance
+	- object Name{}
+	- you dont need to instantiate them to use methods
+	- No one can instantiate it
+	- object can extend or inherit classes but opposite is not allowed
+	- Cannot have public constructor
+	- Scala will instantiate the object on their first use, next time onwards it uses the same object.
+	- We use this as a collection of static methods. Calling them via ObjectName.MethodName()
+	- Singleton Pattern
+	- Companion Object 
+		- Extension of Singleton object
+		- Same file containing one class and one object of same name 
+
+Apply Method
+	- Both Scala and Object has inbuilt apply method
+	- You can write custom apply method and return most used things from there
+	- You just need object name or class name to call them
+	- Scala libraries are full of apply methods
+	- Example list(2) gives second element -> here you are actually calling the apply method
+
 
