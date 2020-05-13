@@ -105,5 +105,20 @@ Why Spark ?
 		- Combines capability of batch processing, structured data handling with SQL, Streaming, GraphX, Mlib with PL.
 	- Ease of use
 		- Much more short simple and easy to read as compared to Map Reduce.
+We execute our program in spark cluster How?
+	- Interactive Shell (Scala Shell, Pyspark)
+		- For exploration
+	- Submit Job
+		- Example a long running streaming job or a periodic batch job - you must package your application 
+		and submit it to spark cluster for execution.
+		- for production use case we will use this.
+
+how does the spark execute our programs on a cluster ?
+Spark is a disturbuted computing engine, follow master slave architecture
+For every spark application it will create one master process and multiple slave process
+Master is the driver and slaves are the executors.
+So for every spark application it will create one driver and multiple executor processes.
+
+
 
 
