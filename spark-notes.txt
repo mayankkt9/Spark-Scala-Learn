@@ -67,5 +67,14 @@ Two things together makes Apache Spark
 	- A cluster computing enginer 
 	- A set of libraries, APIs and DSLs
 
+Spark Ecosystem
+
+At the base you have Spark Core
+Spark Core have two parts 
+	- Computing engine
+	- Set of Spark Core API (Language - Scala,Python,Java,R)
+
+Spark is a Distributed Processing engine 
+It doesnt come with inbuild cluster resource manager and a distributed storage system
 
 
