@@ -692,7 +692,8 @@ Scala Object (Singleton Object)
 		- Purpose 
 			- Seperation of Concern 
 				- Java allows you to create all non static and static fields in the same class
-				- Scala seperate these concern keeps all non static fields in class and all static fields in object
+				- Scala seperate these concern keeps all non static fields in class and all static fields in object keep them togeather
+				- Classes and object can access private methods of each other
 			- Implementing Factory or Builder Pattern
 
 Apply Method
@@ -701,5 +702,7 @@ Apply Method
 	- You just need object name or class name to call them
 	- Scala libraries are full of apply methods
 	- Example list(2) gives second element -> here you are actually calling the apply method
-
+	- If we dont want to use new keyword to instantiate object we can write that in apply method of object
+	- val list = List(1,2,3,4) -> this is calling apply method of object
+	- list(1) -> this is calling apply method of class
 
