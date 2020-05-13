@@ -160,7 +160,13 @@ Components of YARN
 
 What happens when we send a spark submit job ?
 How Yarn allocates resources for a job
+
+When you start a program in Client Mode - Client Mode -> SparkShell, Pyspark, local machine, you are running it in local machine
 	- Driver is the one who started program, Ex - SparkShell, Pyspark
+	- Client Mode means driver is the local machine
+	- Spark application begin by creating a spark session, first thing in any spark 2.x application
+	- SparkShell, Pyspark automatically create spark session for you.
+		- Spark session is kind of a data Structure where the driver mantains all the information including the executor location and their status 
 	- When we submit a job to yarn through driver, the request goes to resource manager
 	- the resource manager will find one node manager and ask it to launch one container
 	- It is the first container of an application and we call it the application master.
@@ -169,3 +175,15 @@ How Yarn allocates resources for a job
 	- Application master executes executor
 	- Application master request resource manager for more containers, 
 	- and application master starts executor in each container
+	- After the initial setup these executors directly communicate with the driver
+
+When you start a program in Cluster Mode
+	- Just the difference is here Yarn Application Master starts the driver and not in the local machine and 
+	you dont have any dependency on your local machine
+	- Rest process is same
+
+Spark Program in Local Mode 
+	- Here you dont need YARN or any resource manager
+	- It begins in the JVM all driver and executor runs in the same JVM
+	- Most convenient for learning 
+
