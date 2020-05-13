@@ -71,7 +71,7 @@ Spark Ecosystem
 
 At the base you have Spark Core
 Spark Core have two parts 
-	- Computing engine
+	- Computing engine (Heavili depends on thirdpart Resource Manager and Storage System)
 		- Provides basic functionality like 
 		- Memory Management
 		- Task Scheduling
@@ -80,8 +80,8 @@ Spark Core have two parts
 		- Manages our spark jobs and give seamless experience to end user
 	- Set of Spark Core API (Language - Scala,Python,Java,R)
 		- Two kind of APIs
-		- Structured API - DataFrame and DataSets - Designed to work with Structured data
-		- UnStructured API - RDDS, Accumulators and broadcast variables (available in Programming language)
+			- Structured API - DataFrame and DataSets - Designed to work with Structured data
+			- UnStructured API - RDDs, Accumulators and broadcast variables (available in Programming language)
 
 Spark is a Distributed Processing engine 
 It doesnt come with inbuild cluster resource manager and a distributed storage system
@@ -94,5 +94,16 @@ OutSide Spark Core we have 4 different sets of Spark Libraries and Packages
 	- Streaming
 	- MLlib
 	- GraphX
+
+
+Why Spark ? 
+	- Abstract Parallel Programming 
+		- We will work with tables SQL
+		- We will work with local python or scala collection
+		- All complexity of distributed storage, computation and parallel programming is abstracted
+	- Unified Platform
+		- Combines capability of batch processing, structured data handling with SQL, Streaming, GraphX, Mlib with PL.
+	- Ease of use
+		- Much more short simple and easy to read as compared to Map Reduce.
 
 
