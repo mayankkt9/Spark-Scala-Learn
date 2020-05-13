@@ -689,6 +689,11 @@ Scala Object (Singleton Object)
 	- Companion Object 
 		- Extension of Singleton object
 		- Same file containing one class and one object of same name 
+		- Purpose 
+			- Seperation of Concern 
+				- Java allows you to create all non static and static fields in the same class
+				- Scala seperate these concern keeps all non static fields in class and all static fields in object
+			- Implementing Factory or Builder Pattern
 
 Apply Method
 	- Both Scala and Object has inbuilt apply method
