@@ -710,3 +710,7 @@ Apply Method
 	- val list = List(1,2,3,4) -> this is calling apply method of object
 	- list(1) -> this is calling apply method of class
 
+
+Coursera Scala Course
+
+

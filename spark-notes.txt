@@ -118,7 +118,54 @@ Spark is a disturbuted computing engine, follow master slave architecture
 For every spark application it will create one master process and multiple slave process
 Master is the driver and slaves are the executors.
 So for every spark application it will create one driver and multiple executor processes.
+Since master is the driver it is responsible for these across the executors
+	- Analysing 
+	- Distributing 
+	- Scheduling 
+	- Monitoring 
+Executors are only responsible to run the code and report it to driver.
+
+Who runs where ? 
+Executors are going to run on cluster machine.
+Driver can be run on local maching or cluster machine
+	- client mode  (start driver on local machine)
+		- when you are exploring or debugging - throwing back output on terminal
+	- cluster mode (start driver on cluster machine) 
+		- (Makes sense for production Deployment)
+		- Because after you run spark submit , you can close your computer they will run independently within cluster
 
 
+Who controls the cluster ? 
+How Spark get the resources for the driver and the executors ?
+- Through Resource Manager
+	- YARN
+		- most widely used resource manager
+	- Mesos
+	- Standalone spark
+		- simple and basic cluster manager
+	- Kubernetes
+		- general purpose container orchestration from google
+		- not yet production ready
 
 
+YARN 
+	- Yet Another Resource Negotiator
+	- framework to provide computational resources for execution engine 
+	- Resources - CPU, Memory, DiskIO, Network Bandwidth
+	- Provide API to request resource requirement and task Scheduling
+	- Yarn API are for customer making computation engine and not for any end user.
+Components of YARN
+	- Resource Manager (One Per Cluster)
+	- Node Manager (One per Data node)
+
+What happens when we send a spark submit job ?
+How Yarn allocates resources for a job
+	- Driver is the one who started program, Ex - SparkShell, Pyspark
+	- When we submit a job to yarn through driver, the request goes to resource manager
+	- the resource manager will find one node manager and ask it to launch one container
+	- It is the first container of an application and we call it the application master.
+	- This application master takes over the responsibility for executing and monitoring the job.
+	- The application master functionality depends upon the application framework (MapReduce or Spark)
+	- Application master executes executor
+	- Application master request resource manager for more containers, 
+	- and application master starts executor in each container
