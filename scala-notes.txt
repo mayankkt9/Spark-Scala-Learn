@@ -695,6 +695,10 @@ Scala Object (Singleton Object)
 				- Scala seperate these concern keeps all non static fields in class and all static fields in object keep them togeather
 				- Classes and object can access private methods of each other
 			- Implementing Factory or Builder Pattern
+				- Create different room types
+				- val s = Room(STANDARD)
+				- val d = Room(DELUXE)
+				- val sd = Room(STD_DEL)
 
 Apply Method
 	- Both Scala and Object has inbuilt apply method

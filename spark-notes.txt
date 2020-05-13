@@ -45,5 +45,19 @@ Ways to Create RDDs
 	- External Data (HDFS | AmazonS3)
 
 
+Learning Journal
+
+Why All this is needed 
+	- Solving huge data computation
+	- Hadoop did came up with 
+		- Distributed Storage (HDFS) and 
+		- Computing Framework (Map Reduce) and 
+		- Resource Manager (Yarn)
+		- Map Reduce Program was inefficient and difficult to code.
+	- Spark is the Compelling replacement of MapReduce
+		- 10 to 100 times faster than Hadoop
+		- fast and general purpose engine for large scale data processing
+		- Under the hood it works on a cluster of computers
+
 
 
