@@ -713,4 +713,12 @@ Apply Method
 
 Coursera Scala Course
 
+Functions are First class citizen 
+	- Functions can be defined anywhere, including inside other functions.
+	- Functions can be passed as a parameter and return from a function
+	- Exist set of operator to compose a function
+
+Evaluation Stratergy 
+	- Call by name - Evalute every function arguement only once 
+	- Call by value - 
 
