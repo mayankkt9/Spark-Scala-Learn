@@ -28,11 +28,14 @@ Types of Functions
 
 
  What functions are pure functions (Should statisfy all three approach)
- 	- Input solely determines the output (There are no other global variable or any other input other than parameter that determines the output)
+ 	- Input solely determines the output (There are no other global variable or any other 
+ 		input other than parameter that determines the output)
  	- The function doesnt change the input (Doesnt have pass by value or reference feature)
- 	- The function doesnt do anything else except computing the output. (Doesnt change global variable state or do anything else)
+ 	- The function doesnt do anything else except computing the output. 
+ 	(Doesnt change global variable state or do anything else)
 
-If any function uses some global variable for calculation or changes global variable, this is an example of side effects in functions.
+If any function uses some global variable for calculation or changes global variable, 
+this is an example of side effects in functions.
 Pure functions are functions that doesnot have side effects.
 
 How can we test if the function is the pure function 
@@ -719,6 +722,11 @@ Functions are First class citizen
 	- Exist set of operator to compose a function
 
 Evaluation Stratergy 
-	- Call by name - Evalute every function arguement only once 
-	- Call by value - 
+	- Call by name - function arguement not evaluated if corresponding parameter is not used in body
+	- Call by value - Evalute every function arguement only once 
+In Scala we use call by value
+	- Call by value is exponentially better than call by name
+Can force Scala to do call by name by 
+	- def func(x:Int, y: => Int)
+	- by putting =>
 
