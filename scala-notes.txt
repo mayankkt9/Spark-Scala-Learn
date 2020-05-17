@@ -17,6 +17,8 @@ Content -
 10) Pattern Matching
 11) Closure
 12) Functional vs OOP
+13) Scala Type hierarchy
+14) Scala Operators or call it Methods
 
 Scala Language Doc link  - https://www.scala-lang.org/api/2.13.2/
 
@@ -357,7 +359,7 @@ But in some scenario it cant do that - Recursive function
 
 Scala is a pure OOP language as every value in a language is an Object (Integer,Double)
 
-Operators
+Scala Operators or call it Methods
 	- There are no operator in Scala
 	- As all value are objects, each have function as their operator
 	- Scala allows us to use the symbols as identifiers
@@ -383,7 +385,7 @@ What if we have no parameter
 Ans - println(-15 abs)
 
 
-Scala Functions 
+Scala Functions and Optional Syntax
 
 def myMax(x:Int,y:Int) : Int = {
 	if(x>y)
@@ -395,7 +397,7 @@ def myMax(x:Int,y:Int) : Int = {
 Things to note as to what all things are required and what are optional
 	- Semicolon is optional
 	- Return keyword is optional
-	- Curly braces or single line body is optional
+	- Curly braces on single line body is optional
 	- Return type is optional
 	- = is must otherwise it would behave as a Unit return type.
 Would look like
