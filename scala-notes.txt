@@ -9,7 +9,7 @@ Scala Language Doc link  - https://www.scala-lang.org/api/2.13.2/
 
 Some Features of Scala Programming 
 	- Supports both Functional Programming and Object Oriented Programming
-	- Immutable Object (Object whose state cant)
+	- Immutable Object (Object whose state cant change)
 	- Referential Transparency (function replaced by its result)
 Functional Programming is way of writing software application using only pure functions and 
 immutable values.
@@ -136,7 +136,8 @@ Tail recursions
 Yes, loops are better than recursion, because recursion takes lots of stack space.
 Functional programming do involve lots of recursion so what is the solutions? 
 Tail recursion is the solution
-	- Function calling is what we do last in a function, such that no statement needs to be executed after that and so we dont have to come back after making each function call
+	- Function calling is what we do last in a function, such that no statement needs
+	to be executed after that and so we dont have to come back after making each function call
 	- Compiler will do the optimization internally
 	- This optimization will overcome the performance and memory problem
 def tailFact(n:Int,f:Int): Int={
