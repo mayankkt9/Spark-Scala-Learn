@@ -12,7 +12,6 @@ Content -
 6) Advantages of Immutability
 7) Tail recursion
 8) Functional Statement
-
 9) Strict and Lazy Evaluation
 10) Pattern Matching
 11) Closure
@@ -20,6 +19,25 @@ Content -
 13) Scala Type hierarchy
 14) Scala Operators or call it Methods
 15) Scala Functions and Optional Syntax
+16) Function Literal
+17) Place Holder Syntax
+18) Local Function
+19) Higher Order Function & Function Currying
+20) Variable length Arguement and Named Arguement
+21) Partially Applied Function
+22) Function Currying 
+23) Scala Control Abstraction
+24) Higher Order abstraction 
+	- foreach
+	- map
+	- filter
+	- withFilter
+
+25) Scala Object Oriented Programming
+	- Constructor
+	- Scala Objects
+	- Apply Method
+
 
 
 Scala Language Doc link  - https://www.scala-lang.org/api/2.13.2/
@@ -395,7 +413,6 @@ def myMax(x:Int,y:Int) : Int = {
 	else
 		return y;
 }
-
 Things to note as to what all things are required and what are optional
 	- Semicolon is optional
 	- Return keyword is optional
@@ -464,6 +481,7 @@ It wont work if there are more underscore than parameter
 Example 
 list.reduce ((x,y)=>x+y/x min y)
 list.reduce(_+_/_ min _) // Compiler wont be able to know where to place x and y .
+
 
 Local Function
 	- Define function inside another function
