@@ -15,6 +15,7 @@ Functional Programming is way of writing software application using only pure fu
 immutable values.
 Library design and data crunching problems (Read later)
 
+
 /***************************************************************************/
 
 /*************** 2. Types of Functions ***************/
