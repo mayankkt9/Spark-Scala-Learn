@@ -19,6 +19,8 @@ Content -
 12) Functional vs OOP
 13) Scala Type hierarchy
 14) Scala Operators or call it Methods
+15) Scala Functions and Optional Syntax
+
 
 Scala Language Doc link  - https://www.scala-lang.org/api/2.13.2/
 
