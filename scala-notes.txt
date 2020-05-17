@@ -1,11 +1,24 @@
+Content - 
+1) Scala Language Doc link
+2) Some Features of Scala Programming
+3) Types of Functions
+	- Pure Functions
+	- Impure Functions
+	- First Class Functions
+	- Higher Order Functions
+	- Anonymous Functions
+4) Benefit of passing around functions and its advantages
+5) Two types of Variable in Scala
+6) Advantages of Immutability
+7) Tail recursion
+8) Functional Statement
 
-
-
+9) Strict and Lazy Evaluation
+10) Pattern Matching
+11) Closure
+12) Functional vs OOP
 
 Scala Language Doc link  - https://www.scala-lang.org/api/2.13.2/
-
-/*************** 1. Some Main Feature of Scala Programming ***************/
-
 
 Some Features of Scala Programming 
 	- Supports both Functional Programming and Object Oriented Programming
@@ -14,11 +27,6 @@ Some Features of Scala Programming
 Functional Programming is way of writing software application using only pure functions and 
 immutable values.
 Library design and data crunching problems (Read later)
-
-
-/***************************************************************************/
-
-/*************** 2. Types of Functions ***************/
 
 Types of Functions
 	- Pure Functions
@@ -57,6 +65,7 @@ First Class Function
 		- You can assign it to a variable 
 		- You can pass it as an arguement to the other functions
 		- You can return it as a value from other functions.
+
 Higher Order functions
 	- In Scala you can create higher order functions
 	- Example map inbuilt functions in scala is a higher order function
@@ -100,16 +109,13 @@ Benefit of passing around functions
 		- More Precise
 		- East to Understand
 		- More Reuse
-
 Example 
 Problem Statement - Remind all customer for payment
-
 Imperative approach
 for(Customer cust : CustList){
 	remind(cust);
 }
-
-Functional Programming Higher order function (here forEach is an higher order function)
+Functional Programming Higher order function (hereforEach is an higher order function)
 forEach(customer,remindPayment)
 forEach(vendors,remindPayment)
 
@@ -119,7 +125,7 @@ Two types of Variable in Scala
 	- var (You can change it)
 Functional programming recommends you using val
 
-Two Advantages of Immutability
+Advantages of Immutability
 	- Adopt Mathematical approach
 	- Helps avoid various problems
 		- immutable objects are more thread safe (Concurrent Programming)
@@ -326,7 +332,7 @@ AnyRef -> List,Seq,Iterable,String
 AnyVal -> Like primitives in Java but they are well defined classes in Scala
 Scala Value classes dont need new keyword and are instantiated using literal
 var x : Int = 123;
-Unit is roughly like a void represented as empty parenthesis.
+Unit is roughly like a void represented as empty parenthesis ().
 Implicit conversion of data type follow here too.
 There are many more AnyVal subclasses like RichInt,RichBoolean.. (additional functionality)
 
