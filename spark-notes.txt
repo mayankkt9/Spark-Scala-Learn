@@ -182,6 +182,7 @@ When you start a program in Cluster Mode
 	you dont have any dependency on your local machine
 	- Rest process is same
 
+
 Spark Program in Local Mode 
 	- Here you dont need YARN or any resource manager
 	- It begins in the JVM all driver and executor runs in the same JVM
