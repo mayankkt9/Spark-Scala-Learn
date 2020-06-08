@@ -745,6 +745,7 @@ Apply Method
 
 Coursera Scala Course
 
+
 Functions are First class citizen 
 	- Functions can be defined anywhere, including inside other functions.
 	- Functions can be passed as a parameter and return from a function
