@@ -19,6 +19,7 @@ Spark Component
 	- Programming Language Supports (Scala | Java | Python | R)
 	- Storage (LocalFS | HDFS | AmazonS3 | RDBMS | NoSQL)
 
+
  
 RDD (Resilient Distributed Data)
 Hadoop stored data in multiple distributed storage disk such as HDFS and multiple IO makes it slow.
